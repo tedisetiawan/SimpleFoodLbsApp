@@ -1,0 +1,4 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/tambah_tempat"
+	android:title="Tambah Data Tempat Makan" />
+</menu>

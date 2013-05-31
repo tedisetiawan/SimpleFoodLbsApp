@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="match_parent"
+  	android:layout_height="match_parent"
+    android:orientation="vertical" 
+  	android:background="@drawable/bg_dashboard"
+	android:padding="10dp" >
+	  
+  <TextView
+    android:id="@+id/tap_text"
+    android:text="WISATA KULINER KOTA MEDAN"
+    android:textSize="18sp"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="70dp"
+    android:layout_height="wrap_content"/>
+  
+  <TextView 
+	android:layout_height="wrap_content"
+    android:textSize="14sp"
+    android:layout_marginLeft="70dp"
+    android:text="Temukan Makanan Favoritmu Disini...!!!"
+    android:layout_marginBottom="30dp"
+	android:layout_width="fill_parent"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent"
+		android:orientation="vertical" >
+
+<TableLayout
+    android:id="@+id/tableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="*"
+    android:gravity="top"
+    android:stretchColumns="*">
+    
+   <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+            
+		<EditText android:text=""
+	    	android:layout_height="wrap_content"
+	    	android:id="@+id/cari_tempat_makan"
+        	android:textSize="16sp"
+            android:layout_span="8"
+        	android:hint="Cari data tempat makan"
+			android:layout_width="fill_parent" >
+		</EditText>
+		
+		<Button
+        	android:id="@+id/btn_cari_tempat_makan"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="11sp"
+            android:layout_span="2"
+        	android:text="CARI" 
+        />
+        
+  	</TableRow>
+</TableLayout> 
+        
+	</LinearLayout>
+
+    <ListView 
+    android:id="@android:id/list" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" />
+    
+</LinearLayout>

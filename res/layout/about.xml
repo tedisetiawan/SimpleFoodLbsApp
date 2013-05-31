@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="match_parent"
+  	android:layout_height="match_parent"
+    android:orientation="vertical" 
+  	android:background="@drawable/bg_dashboard"
+	android:padding="10dp" >
+
+  <TextView
+    android:id="@+id/tap_text"
+    android:text="WISATA KULINER KOTA MEDAN"
+    android:textSize="18sp"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="70dp"
+    android:layout_height="wrap_content"/>
+  
+  <TextView 
+	android:layout_height="wrap_content"
+    android:textSize="14sp"
+    android:layout_marginLeft="70dp"
+    android:text="Temukan Makanan Favoritmu Disini...!!!"
+    android:layout_marginBottom="30dp"
+	android:layout_width="fill_parent"/>
+	
+    <TextView android:text= "Nama : "
+	    android:layout_height="wrap_content"
+        android:textSize="14sp"
+    	android:textColor="#333"
+        android:layout_marginTop="16dp"
+		android:layout_width="fill_parent" >
+	</TextView>
+	
+    <TextView android:text= ""
+	    android:layout_height="wrap_content"
+        android:textSize="16sp"
+    	android:textColor="#333"
+        android:id="@+id/txt_nama_about"
+		android:layout_width="fill_parent" >
+	</TextView>
+	
+    <TextView android:text= "NPM : "
+	    android:layout_height="wrap_content"
+        android:textSize="14sp"
+    	android:textColor="#333"
+        android:layout_marginTop="16dp"
+		android:layout_width="fill_parent" >
+	</TextView>
+	
+    <TextView android:text= ""
+	    android:layout_height="wrap_content"
+        android:textSize="16sp"
+    	android:textColor="#333"
+        android:id="@+id/txt_npm_about"
+		android:layout_width="fill_parent" >
+	</TextView>
+	
+    <TextView android:text= "Jurusan : "
+	    android:layout_height="wrap_content"
+        android:textSize="14sp"
+    	android:textColor="#333"
+        android:layout_marginTop="16dp"
+		android:layout_width="fill_parent" >
+	</TextView>
+	
+    <TextView android:text= ""
+	    android:layout_height="wrap_content"
+        android:textSize="16sp"
+    	android:textColor="#333"
+        android:id="@+id/txt_jurusan_about"
+		android:layout_width="fill_parent" >
+	</TextView>
+	
+    <TextView android:text= "Kampus : "
+	    android:layout_height="wrap_content"
+        android:textSize="14sp"
+    	android:textColor="#333"
+        android:layout_marginTop="16dp"
+		android:layout_width="fill_parent" >
+	</TextView>
+	
+    <TextView android:text= ""
+	    android:layout_height="wrap_content"
+        android:textSize="16sp"
+    	android:textColor="#333"
+        android:id="@+id/txt_kampus_about"
+		android:layout_width="fill_parent" >
+	</TextView>
+
+</LinearLayout>
