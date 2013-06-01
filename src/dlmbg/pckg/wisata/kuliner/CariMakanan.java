@@ -17,9 +17,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class Makanan extends ListActivity {
+public class CariMakanan extends ListActivity {
 	private SqliteManager sqliteDB;
 	private SimpleCursorAdapter mCursorAdapter;
+	private String cari;
 	private EditText cari_et;
 	SessionManager session;
 
@@ -31,12 +32,15 @@ public class Makanan extends ListActivity {
         setContentView(R.layout.list_makanan);
         sqliteDB = new SqliteManager(this);
         sqliteDB.bukaKoneksi();
-
-		Cursor cursor = sqliteDB.bacaDataMakanan();
-
-		startManagingCursor(cursor);
+        
+		Bundle extras = getIntent().getExtras();
+		cari = extras.getString("cari_data");
+		Cursor cursor = sqliteDB.bacaDataPencarianMakanan(cari);
 		
 		cari_et = (EditText) findViewById(R.id.cari_makanan);
+		cari_et.setText(cari);
+
+		startManagingCursor(cursor);
 
 		String[] awal = new String[] { "nama_makanan" };
 		int[] tujuan = new int[] { R.id.rowtext };

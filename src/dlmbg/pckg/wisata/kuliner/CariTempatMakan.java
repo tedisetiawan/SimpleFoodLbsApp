@@ -17,10 +17,11 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class Makanan extends ListActivity {
+public class CariTempatMakan extends ListActivity {
 	private SqliteManager sqliteDB;
 	private SimpleCursorAdapter mCursorAdapter;
 	private EditText cari_et;
+	private String cari;
 	SessionManager session;
 
     @SuppressWarnings("deprecation")
@@ -28,17 +29,20 @@ public class Makanan extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.list_makanan);
+        setContentView(R.layout.list_tempat_makan);
         sqliteDB = new SqliteManager(this);
         sqliteDB.bukaKoneksi();
-
-		Cursor cursor = sqliteDB.bacaDataMakanan();
+        
+		Bundle extras = getIntent().getExtras();
+		cari = extras.getString("cari_data");
+		Cursor cursor = sqliteDB.bacaDataPencarianTempatMakan(cari);
+		
+		cari_et = (EditText) findViewById(R.id.cari_tempat_makan);
+		cari_et.setText(cari);
 
 		startManagingCursor(cursor);
-		
-		cari_et = (EditText) findViewById(R.id.cari_makanan);
 
-		String[] awal = new String[] { "nama_makanan" };
+		String[] awal = new String[] { "nama_tempat" };
 		int[] tujuan = new int[] { R.id.rowtext };
 		mCursorAdapter = new SimpleCursorAdapter(this, R.layout.baris, cursor, awal, tujuan);
 
@@ -61,7 +65,7 @@ public class Makanan extends ListActivity {
 			registerForContextMenu(getListView());
 		}
 		
-		Button button = (Button) findViewById(R.id.btn_cari_makanan);
+		Button button = (Button) findViewById(R.id.btn_cari_tempat_makan);
 		button.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -82,20 +86,18 @@ public class Makanan extends ListActivity {
     	if (session.isLoggedIn() == true) 
 		{
 	        MenuInflater inflater = getMenuInflater();
-	        inflater.inflate(R.menu.opt_makanan, menu);
+	        inflater.inflate(R.menu.opt_tempat_makan, menu);
 		}
         return true;
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-        	case R.id.tambah_makanan:
-        		Intent intent = new Intent(this, TambahMakanan.class);
+        	case R.id.tambah_tempat:
+        		Intent intent = new Intent(this, TambahTempatMakan.class);
         		intent.putExtra("nama_tempat", "");
         		intent.putExtra("lat_lang", "");
-        		intent.putExtra("nama_makanan", "");
-        		intent.putExtra("harga", "");
-        		intent.putExtra("gambar", "");
+        		intent.putExtra("nama_jalan", "");
         		startActivity(intent);
         		return true;
         	default:
@@ -128,7 +130,7 @@ public class Makanan extends ListActivity {
 
     @SuppressWarnings("deprecation")
 	public void hapus(long rowId) {
-    	sqliteDB.hapusData(rowId, "tbl_makanan", "_id");
+    	sqliteDB.hapusData(rowId, "tbl_tempat_makan", "_id");
 		mCursorAdapter.getCursor().requery();
     }
 
@@ -142,20 +144,18 @@ public class Makanan extends ListActivity {
 	}
 
 	public void tampilTempatTerseleksi(Long mRowId) {
-		Cursor cursor = sqliteDB.bacaDataTerseleksiMakanan(mRowId);
-		Intent intent = new Intent(this, DetailMakanan.class);
-		intent.putExtra("id_makanan", cursor.getString(0));
+		Cursor cursor = sqliteDB.bacaDataTerseleksiTempatMakan(mRowId);
+		Intent intent = new Intent(this, DetailTempatMakan.class);
+		intent.putExtra("id_tempat_makan", cursor.getString(0));
 		intent.putExtra("nama_tempat", cursor.getString(1));
 		intent.putExtra("lat_lang", cursor.getString(2));
-		intent.putExtra("nama_makanan", cursor.getString(3));
-		intent.putExtra("harga", cursor.getString(4));
-		intent.putExtra("gambar", cursor.getString(5));
+		intent.putExtra("nama_jalan", cursor.getString(3));
 		startActivity(intent);
 
 	}
 
 	public void startDetail(long rowId, boolean baru) {
-		Intent intent = new Intent(this, TambahMakanan.class);
+		Intent intent = new Intent(this, TambahTempatMakan.class);
 		if (!baru) {
 			intent.putExtra(EXTRA_ROWID, rowId);
 		}
@@ -163,7 +163,7 @@ public class Makanan extends ListActivity {
 	}
 
 	public void CariData() {
-		Intent intent = new Intent(this, CariMakanan.class);
+		Intent intent = new Intent(this, CariTempatMakan.class);
 		intent.putExtra("cari_data", cari_et.getText().toString());
 		startActivity(intent);
 	}

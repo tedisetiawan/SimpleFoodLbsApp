@@ -12,7 +12,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class Peta extends  Activity {
-	  static final LatLng DENPASAR = new LatLng(-8.658075,115.211563);
+	  static final LatLng MEDAN = new LatLng(3.584695,98.675079);
 	  private GoogleMap map;
 
 	  @Override
@@ -21,11 +21,11 @@ public class Peta extends  Activity {
 	    setContentView(R.layout.peta_online);
 	    map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 	    Marker denpasar = map.addMarker(new MarkerOptions()
-	        .position(DENPASAR)
-	        .title("Denpasar")
-	        .snippet("Kota Denpasar - Kota Berwawasan Budaya"));
+	        .position(MEDAN)
+	        .title("Medan")
+	        .snippet("Kota Medan - Kota Yang Indah"));
 
-	    map.moveCamera(CameraUpdateFactory.newLatLngZoom(DENPASAR, 15));
+	    map.moveCamera(CameraUpdateFactory.newLatLngZoom(MEDAN, 15));
 
 	    map.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
 	  }

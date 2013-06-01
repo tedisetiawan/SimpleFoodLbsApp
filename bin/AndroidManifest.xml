@@ -52,6 +52,8 @@
 		<activity android:name="Makanan" android:label="@string/app_name" android:screenOrientation="portrait"></activity>
 		<activity android:name="TambahMakanan" android:label="@string/app_name" android:screenOrientation="portrait"></activity>
 		<activity android:name="DetailMakanan" android:label="@string/app_name" android:screenOrientation="portrait"></activity>
+		<activity android:name="CariMakanan" android:label="@string/app_name" android:screenOrientation="portrait"></activity>
+		<activity android:name="CariTempatMakan" android:label="@string/app_name" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

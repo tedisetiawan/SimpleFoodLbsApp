@@ -159,8 +159,8 @@ public class TempatMakan extends ListActivity {
 	}
 
 	public void CariData() {
-		/*Intent intent = new Intent(this, CariPenemu.class);
+		Intent intent = new Intent(this, CariTempatMakan.class);
 		intent.putExtra("cari_data", cari_et.getText().toString());
-		startActivity(intent);*/
+		startActivity(intent);
 	}
 }
