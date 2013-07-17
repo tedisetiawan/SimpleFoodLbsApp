@@ -43,7 +43,7 @@
 	    	android:layout_height="wrap_content"
 	    	android:id="@+id/cari_makanan"
         	android:textSize="16sp"
-            android:layout_span="8"
+            android:layout_span="6"
         	android:hint="Cari data makanan"
 			android:layout_width="fill_parent" >
 		</EditText>
@@ -52,9 +52,18 @@
         	android:id="@+id/btn_cari_makanan"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
-        	android:textSize="11sp"
+        	android:textSize="10sp"
             android:layout_span="2"
         	android:text="CARI" 
+        />
+		
+		<Button
+        	android:id="@+id/btn_tambah_makanan"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="10sp"
+            android:layout_span="2"
+        	android:text="TAMBAH" 
         />
         
   	</TableRow>

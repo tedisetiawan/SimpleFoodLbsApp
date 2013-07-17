@@ -20,7 +20,7 @@ public class Peta extends  Activity {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.peta_online);
 	    map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
-	    Marker denpasar = map.addMarker(new MarkerOptions()
+	    map.addMarker(new MarkerOptions()
 	        .position(MEDAN)
 	        .title("Medan")
 	        .snippet("Kota Medan - Kota Yang Indah"));

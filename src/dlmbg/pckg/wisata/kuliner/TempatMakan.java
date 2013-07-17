@@ -69,6 +69,15 @@ public class TempatMakan extends ListActivity {
 				finish();
 			}
 		});
+		
+		Button btn_tambah = (Button) findViewById(R.id.btn_tambah_tempat_makan);
+		btn_tambah.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				StartTambah();
+				finish();
+			}
+		});
 
     }
 
@@ -162,5 +171,23 @@ public class TempatMakan extends ListActivity {
 		Intent intent = new Intent(this, CariTempatMakan.class);
 		intent.putExtra("cari_data", cari_et.getText().toString());
 		startActivity(intent);
+	}
+    
+    public void StartTambah() {
+    	if(session.isLoggedIn() == true)
+    	{
+    		Intent intent = new Intent(this, TambahTempatMakan.class);
+    		intent.putExtra("nama_tempat", "");
+    		intent.putExtra("lat_lang", "");
+    		intent.putExtra("nama_jalan", "");
+    		startActivity(intent);
+    		finish();
+    	}
+    	else
+    	{
+    		Intent intent = new Intent(this, Admin.class);
+    		startActivity(intent);
+    		finish();
+    	}
 	}
 }

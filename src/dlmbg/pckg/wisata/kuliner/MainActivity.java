@@ -25,7 +25,7 @@ public class MainActivity extends FragmentActivity
 
     private GoogleMap mMap;
     private TextView mTapTextView;
-    static final LatLng DENPASAR = new LatLng(-8.658075,115.211563);
+    static final LatLng MEDAN = new LatLng(-8.658075,115.211563);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,7 @@ public class MainActivity extends FragmentActivity
         mMap.setOnMapClickListener(this);
         mMap.setOnMapLongClickListener(this);
         mMap.setOnCameraChangeListener(this);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DENPASAR, 14));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MEDAN, 14));
     }
 
     @Override

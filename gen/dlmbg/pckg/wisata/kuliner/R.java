@@ -184,10 +184,10 @@ containing a value of this type.
         public static final int ic_launcher=0x7f02001a;
     }
     public static final class id {
-        public static final int action_settings=0x7f050028;
+        public static final int action_settings=0x7f05002a;
         public static final int btn_about=0x7f050013;
         public static final int btn_cari_makanan=0x7f050023;
-        public static final int btn_cari_tempat_makan=0x7f050025;
+        public static final int btn_cari_tempat_makan=0x7f050026;
         public static final int btn_choose=0x7f050018;
         public static final int btn_dashboard=0x7f050011;
         public static final int btn_data_makanan=0x7f050010;
@@ -196,8 +196,10 @@ containing a value of this type.
         public static final int btn_peta=0x7f050012;
         public static final int btn_simpan_makanan=0x7f05001c;
         public static final int btn_simpan_tempat_makan=0x7f050020;
+        public static final int btn_tambah_makanan=0x7f050024;
+        public static final int btn_tambah_tempat_makan=0x7f050027;
         public static final int cari_makanan=0x7f050022;
-        public static final int cari_tempat_makan=0x7f050024;
+        public static final int cari_tempat_makan=0x7f050025;
         public static final int detail_pict=0x7f050014;
         public static final int ed_gambar_makanan=0x7f05001a;
         public static final int ed_harga_makanan=0x7f05001b;
@@ -212,15 +214,15 @@ containing a value of this type.
         public static final int hybrid=0x7f050004;
         public static final int iv_pic=0x7f050019;
         public static final int map=0x7f05000a;
-        public static final int menu_delete=0x7f050027;
-        public static final int menu_edit=0x7f050026;
+        public static final int menu_delete=0x7f050029;
+        public static final int menu_edit=0x7f050028;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int rowtext=0x7f05000e;
         public static final int satellite=0x7f050002;
         public static final int tableLayout1=0x7f050021;
-        public static final int tambah_makanan=0x7f050029;
-        public static final int tambah_tempat=0x7f05002a;
+        public static final int tambah_makanan=0x7f05002b;
+        public static final int tambah_tempat=0x7f05002c;
         public static final int tap_text=0x7f050005;
         public static final int terrain=0x7f050003;
         public static final int txt_jurusan_about=0x7f050008;
