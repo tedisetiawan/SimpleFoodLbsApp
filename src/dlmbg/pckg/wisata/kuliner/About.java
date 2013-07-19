@@ -22,10 +22,10 @@ public class About extends Activity {
  		TextView txt_jurusan = (TextView) findViewById(R.id.txt_jurusan_about);
  		TextView txt_kampus = (TextView) findViewById(R.id.txt_kampus_about);
 
- 		txt_nama.setText("Gede Lumbung Suma Wijaya");
- 		txt_npm.setText("1109100350");
- 		txt_jurusan.setText("Open Source");
- 		txt_kampus.setText("http://gedelumbung.com");
+ 		txt_nama.setText("Rathika Dwinasari");
+ 		txt_npm.setText("08350068");
+ 		txt_jurusan.setText("Teknik Informatika");
+ 		txt_kampus.setText("STT Harapan Medan");
 
     }
 }

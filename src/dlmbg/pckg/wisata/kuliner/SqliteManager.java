@@ -18,7 +18,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class SqliteManager {
 	public static final int VERSI_DATABASE= 1;
-	public static final String NAMA_DATABASE = "DbWisataKuliner";
+	public static final String NAMA_DATABASE = "DataBaseWisataKuliner";
 	public static final int POSISI_ID = 0;
 
 	public static final String[] FIELD_TABEL_TEMPAT_MAKAN ={"_id","nama_tempat","lat_lang","nama_jalan"};
