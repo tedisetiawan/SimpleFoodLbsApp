@@ -22,7 +22,7 @@ public class SqliteManager {
 	public static final int POSISI_ID = 0;
 
 	public static final String[] FIELD_TABEL_TEMPAT_MAKAN ={"_id","nama_tempat","lat_lang","nama_jalan"};
-	public static final String[] FIELD_TABEL_MAKANAN ={"_id", "nama_tempat","lat_lang", "nama_makanan", "harga", "gambar"};
+	public static final String[] FIELD_TABEL_MAKANAN ={"_id, (nama_makanan || ' - Rp.' || harga) as makanan_tampil", "nama_tempat","lat_lang", "nama_makanan", "harga", "gambar"};
 
 	private Context crudContext;
 	private SQLiteDatabase crudDatabase;

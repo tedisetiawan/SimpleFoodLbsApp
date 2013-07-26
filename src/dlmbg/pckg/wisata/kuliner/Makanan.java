@@ -38,7 +38,7 @@ public class Makanan extends ListActivity {
 		
 		cari_et = (EditText) findViewById(R.id.cari_makanan);
 
-		String[] awal = new String[] { "nama_makanan" };
+		String[] awal = new String[] { "makanan_tampil" };
 		int[] tujuan = new int[] { R.id.rowtext };
 		mCursorAdapter = new SimpleCursorAdapter(this, R.layout.baris, cursor, awal, tujuan);
 
@@ -154,11 +154,11 @@ public class Makanan extends ListActivity {
 		Cursor cursor = sqliteDB.bacaDataTerseleksiMakanan(mRowId);
 		Intent intent = new Intent(this, DetailMakanan.class);
 		intent.putExtra("id_makanan", cursor.getString(0));
-		intent.putExtra("nama_tempat", cursor.getString(1));
-		intent.putExtra("lat_lang", cursor.getString(2));
-		intent.putExtra("nama_makanan", cursor.getString(3));
-		intent.putExtra("harga", cursor.getString(4));
-		intent.putExtra("gambar", cursor.getString(5));
+		intent.putExtra("nama_tempat", cursor.getString(2));
+		intent.putExtra("lat_lang", cursor.getString(3));
+		intent.putExtra("nama_makanan", cursor.getString(4));
+		intent.putExtra("harga", cursor.getString(5));
+		intent.putExtra("gambar", cursor.getString(6));
 		startActivity(intent);
 
 	}
